@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Diego Barrios — portfolio digital de productos, ingeniería y dirección de arte." />
+    <title>DIEGO BARRIOS / PORTFOLIO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#inicio" aria-label="Diego Barrios, inicio">
+        <strong>DIEGO BARRIOS</strong><span>/</span><em>PORTFOLIO</em>
+      </a>
+      <nav class="main-nav" aria-label="Navegación principal" aria-hidden="false">
+        <a class="active" href="#proyectos">WORKS</a>
+        <a href="#project-details">DETAILS</a>
+        <a href="#proyectos">LAB</a>
+        <a href="#contacto">CONTACTO</a>
+      </nav>
+      <div class="availability"><i></i><span>DISPONIBILIDAD</span><b>/ OPEN</b></div>
+      <button class="menu-button" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span></button>
+    </header>
+
+    <main id="inicio">
+      <section class="intro shell reveal">
+        <div class="intro-meta">
+          <span class="pill"><i></i>[ 03 / SELECCIÓN CURADA ]</span>
+          <span class="coordinates">LAT 10°23'59" N &nbsp; / &nbsp; LNG 75°30'52" W</span>
+        </div>
+        <div class="index"><span>[ INDEX ]</span><strong>01</strong><small>·</small><span>02</span><small>·</small><span>03</span></div>
+      </section>
+
+      <section class="hero shell reveal">
+        <div class="hero-copy">
+          <p class="eyebrow">INGENIERÍA DIGITAL <span>×</span> DIRECCIÓN DE ARTE</p>
+          <h1>Interfaces con<br /><em>gravedad propia.</em></h1>
+          <p class="hero-text">Diseño y construyo productos digitales donde la arquitectura técnica y la sensibilidad visual se encuentran para crear experiencias memorables.</p>
+          <div class="hero-actions">
+            <a class="button button-light" href="#proyectos">EXPLORAR PROYECTOS <span>↗</span></a>
+            <span class="hero-note">PRODUCT DESIGN / FULL STACK / MOTION</span>
+          </div>
+        </div>
+        <div class="hero-aside" aria-label="Resumen profesional">
+          <span class="hero-aside-label">[ DB / 001 ]</span>
+          <strong>PRODUCT<br />ENGINEER</strong>
+          <p>Convierto ideas complejas en productos claros, rápidos y con carácter.</p>
+          <div class="hero-stat"><span>BASED IN</span><b>CARTAGENA, CO</b></div>
+          <div class="hero-stat"><span>STATUS</span><b class="live">● SELECTED PROJECTS</b></div>
+        </div>
+        <span class="scroll-cue">SCROLL TO EXPLORE <i>↓</i></span>
+      </section>
+
+      <div id="proyectos"><div id="selected-works-root"></div></div>
+      <section id="proyectos-legacy" class="works shell" hidden>
+        <div class="works-heading reveal">
+          <div><span class="technical-label">[ 01 — SELECTED PROJECTS ]</span><h2>Selected <em>Works.</em></h2><p>Una selección de proyectos donde la ingeniería y el diseño se encuentran.</p></div>
+          <div class="works-controls"><span class="project-count">05 / PROJECTS</span><div class="filters" role="group" aria-label="Filtrar proyectos"><button class="filter active" data-filter="all">ALL</button><button class="filter" data-filter="full-stack">FULL STACK</button><button class="filter" data-filter="web">WEB <span>03</span></button><button class="filter" data-filter="private">PRIVATE <span>01</span></button></div></div>
+        </div>
+        <div class="showcase">
+          <article class="showcase-project reveal" data-category="full-stack" id="football-jersey-store">
+            <a class="showcase-media image-frame" href="https://www.flashsports.shop/" target="_blank" rel="noreferrer" aria-label="Visitar Flashsports"><img loading="lazy" decoding="async" src="https://xmsreelwxwqjzgtkxcje.supabase.co/storage/v1/object/public/product-images/products/cmvj4q9ax001d13ayz6r3ifrv/brasil-retro-98-1792649154021-0.webp" alt="Producto real de Flashsports: camiseta de fútbol retro" /><span class="media-status">● LIVE BUILD / 01</span></a>
+            <div class="showcase-copy"><div class="project-meta"><span>[ 01 ] &nbsp; FULL STACK / E-COMMERCE</span><span>2025</span></div><h3>FOOTBALL<br /><em>JERSEY STORE</em></h3><p>Plataforma de gestión comercial y deportiva para Flashsports: camisetas de fútbol, piezas retro y ediciones de partido.</p><div class="tags"><span>E-Commerce</span><span>Payments</span><span>Fulfillment</span></div><a class="explore-link" href="https://www.flashsports.shop/" target="_blank" rel="noreferrer">EXPLORE PROJECT <span>↗</span></a></div>
+          </article>
+          <article class="showcase-project showcase-reverse reveal" data-category="web" id="cartagena-travel">
+            <a class="showcase-media image-frame" href="https://www.cartagenatailoredtravel.com/" target="_blank" rel="noreferrer" aria-label="Visitar Cartagena Tailored Travel"><img loading="lazy" decoding="async" src="https://tfjicnbkytsfkykauqpf.supabase.co/storage/v1/object/public/images/hero-og.jpeg" alt="Imagen real de Cartagena Tailored Travel" /><span class="media-status">● EXPERIENCE SYSTEM / 02</span></a>
+            <div class="showcase-copy"><div class="project-meta"><span>[ 02 ] &nbsp; WEB DEVELOPMENT / TRAVEL</span><span>2025</span></div><h3>CARTAGENA<br /><em>TAILORED TRAVEL</em></h3><p>Plataforma digital de experiencias turísticas personalizadas: hospedajes, islas, yates y experiencias seleccionadas por expertos locales.</p><div class="tags"><span>Web Design</span><span>Booking UX</span><span>Travel</span></div><a class="explore-link" href="https://www.cartagenatailoredtravel.com/" target="_blank" rel="noreferrer">EXPLORE PROJECT <span>↗</span></a></div>
+          </article>
+          <article class="showcase-project showcase-reverse reveal" data-category="web" id="masajista-colombiana">
+            <a class="showcase-media image-frame" href="https://www.masajistacolombiana.com/" target="_blank" rel="noreferrer" aria-label="Visitar Masajista Colombiana"><img loading="lazy" decoding="async" src="assets/masajista-colombiana-showcase.png" alt="Galería real del sitio Masajista Colombiana" /><span class="media-status">● WELLNESS EXPERIENCE / 03</span></a>
+            <div class="showcase-copy"><div class="project-meta"><span>[ 03 ] &nbsp; WEB DEVELOPMENT / WELLNESS</span><span>2025</span></div><h3>MASAJISTA<br /><em>COLOMBIANA</em></h3><p>Experiencia digital para terapias profesionales, bienestar y viajes energéticos diseñados a medida.</p><div class="tags"><span>Web Design</span><span>Content System</span><span>WhatsApp UX</span></div><a class="explore-link" href="https://www.masajistacolombiana.com/" target="_blank" rel="noreferrer">EXPLORE PROJECT <span>↗</span></a></div>
+          </article>
+          <article class="showcase-project reveal" data-category="web" id="runnet">
+            <a class="showcase-media image-frame" href="https://www.runnet.com.co/" aria-label="Visitar RUNNET"><img loading="lazy" decoding="async" src="public/images/projects/runnet/cover.svg" alt="RUNNET web showcase placeholder" /><span class="media-status">● PUBLIC SHOWCASE / 04</span></a>
+            <div class="showcase-copy"><div class="project-meta"><span>[ 04 ] &nbsp; WEB DEVELOPMENT / LOGISTICS</span><span>LIVE</span></div><h3>RUNNET</h3><p>Muestra web para una empresa de mensajería, enfocada en presentar sus servicios y facilitar el contacto con nuevos clientes.</p><a class="explore-link" href="https://www.runnet.com.co/">EXPLORE PROJECT <span>↗</span></a></div>
+          </article>
+          <article class="showcase-project showcase-reverse reveal private-project" data-category="private" id="grastore">
+            <a class="showcase-media image-frame" href="projects/grastore/index.html" aria-label="Explore GRASTORE case study"><img loading="lazy" decoding="async" src="public/images/projects/grastore/gallery/overview.png" alt="Dashboard real de GRASTORE" /><span class="media-status">● PRIVATE PROJECT / 05</span></a>
+            <div class="showcase-copy"><div class="project-meta"><span>[ 05 ] &nbsp; INTERNAL WEB APPLICATION</span><span>PRIVATE</span></div><h3>GRASTORE</h3><span class="private-badge">PRIVATE PROJECT</span><p>Aplicación web interna. La información del proyecto y las capturas se incorporarán en el case study.</p><a class="explore-link" href="projects/grastore/index.html">EXPLORE CASE STUDY <span>↗</span></a></div>
+          </article>
+        </div>
+      </section>
+
+      <section id="project-details" class="project-details shell">
+        <div class="details-heading reveal"><span class="technical-label">[ 02 — PROJECT DETAILS ]</span><p>Una mirada al proceso detrás de cada sistema.</p></div>
+        <article class="detail reveal" id="football-details"><div class="detail-number">01</div><div class="detail-body"><div class="detail-grid"><div><span class="technical-label">FOOTBALL JERSEY STORE / FULL STACK</span><h3>Comercio con una capa de operación deportiva.</h3></div><div><p>El objetivo era convertir una tienda especializada en un sistema de venta y gestión preparado para crecer.</p><p><strong>Problema →</strong> catálogo, stock y checkout desconectados.<br /><strong>Solución →</strong> una experiencia transaccional unificada.</p><a class="explore-link" href="https://www.flashsports.shop/" target="_blank" rel="noreferrer">VIEW LIVE ↗</a></div></div></div></article>
+        <article class="detail reveal" id="cartagena-details"><div class="detail-number">02</div><div class="detail-body"><div class="detail-grid"><div><span class="technical-label">CARTAGENA TAILORED TRAVEL / WEB</span><h3>El destino como interfaz.</h3></div><div><p>Una herramienta para diseñar recorridos personalizados con contexto visual, mapas y reservas.</p><p><strong>Problema →</strong> demasiadas opciones sin una narrativa clara.<br /><strong>Solución →</strong> un itinerario flexible, visual y humano.</p><div class="tags"><span>React</span><span>Mapbox GL</span><span>GraphQL</span></div></div></div></div></article>
+        <article class="detail reveal" id="masajista-details"><div class="detail-number">03</div><div class="detail-body"><div class="detail-grid"><div><span class="technical-label">MASAJISTA COLOMBIANA / WELLNESS</span><h3>El bienestar como experiencia digital.</h3></div><div><p>Un sitio editorial para presentar terapias, servicios y experiencias turísticas energéticas con una ruta clara hacia la reserva.</p><p><strong>Problema →</strong> comunicar múltiples servicios sin perder cercanía.<br /><strong>Solución →</strong> contenido estructurado, narrativa personal y contacto directo.</p><div class="tags"><span>Web Design</span><span>Content System</span><span>WhatsApp UX</span></div></div></div></div></article>
+      </section>
+
+      <section id="contacto" class="contact shell reveal"><div><span class="pill">[ OPEN FOR SELECTED WORK ]</span><h2>¿Construimos algo<br /><em>imposible de ignorar?</em></h2></div><div class="contact-action"><a class="button button-light" href="https://wa.me/573122751857" target="_blank" rel="noreferrer">ESCRÍBEME POR WHATSAPP <span>↗</span></a></div></section>
+    </main>
+    <footer class="site-footer shell"><div><strong>DIEGO BARRIOS</strong><span>/ PORTFOLIO</span></div><nav><a href="#football-jersey-store">01 / FOOTBALL JERSEY STORE</a><a href="#cartagena-travel">02 / CARTAGENA TRAVEL</a><a href="#masajista-colombiana">03 / MASAJISTA COLOMBIANA</a><a href="#runnet">04 / RUNNET</a><a href="#grastore">05 / GRASTORE</a></nav><div class="footer-links"><a href="https://github.com/" target="_blank" rel="noreferrer">GITHUB ↗</a><a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LINKEDIN ↗</a><a href="https://wa.me/573122751857" target="_blank" rel="noreferrer">WHATSAPP ↗</a></div><small>© 2025 DIEGO BARRIOS / CARTAGENA, CO <a href="#inicio">↑ TOP</a></small></footer>
+    <script type="module" src="src/main.jsx"></script>
+    <script defer src="script.js"></script>
+  </body>
+</html>

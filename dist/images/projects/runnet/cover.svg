@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title>RUNNET capture placeholder</title>
+  <desc>Replace this placeholder with a real RUNNET application screenshot.</desc>
+  <rect width="1600" height="900" fill="#121212"/>
+  <path d="M0 130h1600M0 210h1600M0 290h1600M0 370h1600M0 450h1600M0 530h1600M0 610h1600M0 690h1600M0 770h1600M160 0v900M320 0v900M480 0v900M640 0v900M800 0v900M960 0v900M1120 0v900M1280 0v900M1440 0v900" stroke="#252525" stroke-width="1"/>
+  <circle cx="92" cy="72" r="6" fill="#4edea3"/>
+  <text x="128" y="80" fill="#777" font-family="monospace" font-size="24" letter-spacing="4">RUNNET / CAPTURE PENDING</text>
+  <text x="128" y="460" fill="#f4f4f1" font-family="sans-serif" font-size="72">ADD REAL SCREENSHOT</text>
+  <text x="128" y="510" fill="#777" font-family="monospace" font-size="22" letter-spacing="2">public/images/projects/runnet/cover.webp</text>
+</svg>
