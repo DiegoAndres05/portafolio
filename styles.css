@@ -23,7 +23,7 @@
 .showcase-media{transition:border-color .5s,box-shadow .5s;will-change:transform}
 .showcase-project:hover .showcase-media img,.showcase-project.is-active .showcase-media img{transform:scale(1.035);filter:saturate(1)}
 .showcase-project.is-active .showcase-media{border-color:rgba(78,222,163,.65);box-shadow:0 18px 60px rgba(0,0,0,.28),0 0 0 1px rgba(78,222,163,.12)}
-.contact-action{align-self:end;display:flex;align-items:flex-end}
+.contact-action{align-self:center;justify-self:center;display:flex;align-items:center;justify-content:center}
 .contact-action .button{white-space:nowrap}
-@media(max-width:900px){.contact-action{align-self:start}}
+@media(max-width:900px){.contact-action{align-self:center;justify-self:start}}
 @media (prefers-reduced-motion:reduce){.showcase-project,.showcase-media{will-change:auto}.showcase-project.is-active{background:transparent;border-bottom-color:var(--line)}.showcase-project.is-active .showcase-media{box-shadow:none}}
