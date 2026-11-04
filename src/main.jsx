@@ -1,70 +1,17 @@
 import React, { useState } from "react";
 import { createRoot } from "react-dom/client";
 import "./selected-works.css";
-import masajistaImage from "../assets/masajista-colombiana-showcase.png";
-import runnetImage from "../public/images/projects/runnet/cover.svg";
-import grastoreImage from "../public/images/projects/grastore/gallery/overview.png";
-
-const projects = [
-  {
-    number: "01",
-    name: "Football Jersey Store",
-    category: "FULL STACK / E-COMMERCE",
-    meta: "2025",
-    image: "https://xmsreelwxwqjzgtkxcje.supabase.co/storage/v1/object/public/product-images/products/cmvj4q9ax001d13ayz6r3ifrv/brasil-retro-98-1792649154021-0.webp",
-    description: "Plataforma de gestión comercial y deportiva para Flashsports.",
-    tags: ["E-Commerce", "Payments", "Fulfillment"],
-    href: "https://www.flashsports.shop/"
-  },
-  {
-    number: "02",
-    name: "Cartagena Tailored Travel",
-    category: "WEB DEVELOPMENT / TRAVEL",
-    meta: "2025",
-    image: "https://tfjicnbkytsfkykauqpf.supabase.co/storage/v1/object/public/images/hero-og.jpeg",
-    description: "Experiencias turísticas personalizadas, hospedajes, islas, yates y reservas.",
-    tags: ["Web Design", "Booking UX", "Travel"],
-    href: "https://www.cartagenatailoredtravel.com/"
-  },
-  {
-    number: "03",
-    name: "Masajista Colombiana",
-    category: "WEB DEVELOPMENT / WELLNESS",
-    meta: "2025",
-    image: masajistaImage,
-    description: "Experiencia digital para terapias profesionales, bienestar y viajes energéticos.",
-    tags: ["Web Design", "Content System", "WhatsApp UX"],
-    href: "https://www.masajistacolombiana.com/"
-  },
-  {
-    number: "04",
-    name: "RUNNET",
-    category: "WEB DEVELOPMENT / LOGISTICS",
-    meta: "LIVE",
-    image: runnetImage,
-    description: "Muestra web para una empresa de mensajería enfocada en nuevos clientes.",
-    tags: ["Web Development", "Logistics"],
-    href: "https://www.runnet.com.co/"
-  },
-  {
-    number: "05",
-    name: "GRASTORE",
-    category: "INTERNAL WEB APPLICATION",
-    meta: "PRIVATE",
-    image: grastoreImage,
-    description: "Aplicación web interna para operación comercial y punto de venta.",
-    tags: ["Private Project", "Operations"],
-    href: "projects/grastore/index.html"
-  }
-];
+import { selectedProjects as projects } from "../data/projects.js";
 
 function FolderCard({ project, open, onToggle }) {
+  const detailsId = `project-details-${project.number}`;
+
   return (
     <article className={`folder-card ${open ? "is-open" : ""}`}>
-      <button className="folder-visual" type="button" onClick={onToggle} aria-expanded={open} aria-label={`${open ? "Cerrar" : "Abrir"} ${project.name}`}>
+      <button className="folder-visual" type="button" onClick={onToggle} aria-expanded={open} aria-controls={detailsId} aria-label={`${open ? "Cerrar" : "Abrir"} ${project.name}`}>
         <span className="folder-tab" />
         <span className="folder-back">
-          <img src={project.image} alt="" />
+          <img src={project.image} alt="" loading="lazy" decoding="async" />
         </span>
         <span className="folder-files" aria-hidden="true">
           <span />
@@ -72,18 +19,21 @@ function FolderCard({ project, open, onToggle }) {
           <span />
         </span>
         <span className="folder-front">
+          <img className="folder-cover" src={project.image} alt={project.imageAlt} loading="lazy" decoding="async" />
+          <span className="folder-shade" />
           <span className="folder-label">
             <strong>{project.name}</strong>
             <small>{project.category}</small>
           </span>
           <span className="folder-index">/{project.number}</span>
+          <span className="folder-action">{open ? "CLOSE" : "VIEW"} <span>↗</span></span>
         </span>
       </button>
-      <div className="folder-details">
+      <div className="folder-details" id={detailsId} aria-hidden={!open}>
         <div className="folder-meta"><span>{project.category}</span><span>{project.meta}</span></div>
         <p>{project.description}</p>
         <div className="folder-tags">{project.tags.map((tag) => <span key={tag}>{tag}</span>)}</div>
-        <a className="folder-link" href={project.href} target="_blank" rel="noreferrer">OPEN PROJECT <span>↗</span></a>
+        <a className="folder-link" href={project.href} target="_blank" rel="noreferrer" tabIndex={open ? 0 : -1}>OPEN PROJECT <span>↗</span></a>
       </div>
     </article>
   );
@@ -109,9 +59,9 @@ function SelectedWorks() {
           <p>Hover to lean · Click to open · Explore to visit</p>
         </div>
         <div className="react-works-controls">
-          <span>05 / PROJECTS</span>
+          <span>{String(visibleProjects.length).padStart(2, "0")} / PROJECTS</span>
           <div role="group" aria-label="Filter projects">
-            {filters.map((item) => <button key={item} className={filter === item ? "active" : ""} type="button" onClick={() => setFilter(item)}>{item}</button>)}
+            {filters.map((item) => <button key={item} className={filter === item ? "active" : ""} type="button" aria-pressed={filter === item} onClick={() => { setFilter(item); setOpenProject(null); }}>{item}</button>)}
           </div>
         </div>
       </div>

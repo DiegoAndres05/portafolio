@@ -1,3 +1,63 @@
+import masajistaImage from "../assets/masajista-colombiana-showcase.png";
+
+export const selectedProjects = [
+  {
+    number: "01",
+    name: "Football Jersey Store",
+    category: "FULL STACK / E-COMMERCE",
+    meta: "2025",
+    image: "https://xmsreelwxwqjzgtkxcje.supabase.co/storage/v1/object/public/product-images/products/cmvj4q9ax001d13ayz6r3ifrv/brasil-retro-98-1792649154021-0.webp",
+    imageAlt: "Camiseta de fútbol retro de Flashsports",
+    description: "Plataforma de gestión comercial y deportiva para Flashsports.",
+    tags: ["E-Commerce", "Payments", "Fulfillment"],
+    href: "https://www.flashsports.shop/",
+  },
+  {
+    number: "02",
+    name: "Cartagena Tailored Travel",
+    category: "WEB DEVELOPMENT / TRAVEL",
+    meta: "2025",
+    image: "https://tfjicnbkytsfkykauqpf.supabase.co/storage/v1/object/public/images/hero-og.jpeg",
+    imageAlt: "Experiencia visual de Cartagena Tailored Travel",
+    description: "Experiencias turísticas personalizadas, hospedajes, islas, yates y reservas.",
+    tags: ["Web Design", "Booking UX", "Travel"],
+    href: "https://www.cartagenatailoredtravel.com/",
+  },
+  {
+    number: "03",
+    name: "Masajista Colombiana",
+    category: "WEB DEVELOPMENT / WELLNESS",
+    meta: "2025",
+    image: masajistaImage,
+    imageAlt: "Galería del sitio Masajista Colombiana",
+    description: "Experiencia digital para terapias profesionales, bienestar y viajes energéticos.",
+    tags: ["Web Design", "Content System", "WhatsApp UX"],
+    href: "https://www.masajistacolombiana.com/",
+  },
+  {
+    number: "04",
+    name: "RUNNET",
+    category: "WEB DEVELOPMENT / LOGISTICS",
+    meta: "LIVE",
+    image: "/images/projects/runnet/cover.svg",
+    imageAlt: "Vista previa del sitio web de RUNNET",
+    description: "Muestra web para una empresa de mensajería enfocada en nuevos clientes.",
+    tags: ["Web Development", "Logistics"],
+    href: "https://www.runnet.com.co/",
+  },
+  {
+    number: "05",
+    name: "GRASTORE",
+    category: "INTERNAL WEB APPLICATION",
+    meta: "PRIVATE",
+    image: "/images/projects/grastore/gallery/overview.png",
+    imageAlt: "Dashboard operativo de GRASTORE",
+    description: "Aplicación web interna para operación comercial y punto de venta.",
+    tags: ["Private Project", "Operations"],
+    href: "projects/grastore/index.html",
+  },
+];
+
 const privateProjects = {
   runnet: {
     slug: "runnet",
