@@ -7,7 +7,7 @@ function FolderCard({ project, open, onToggle }) {
   const detailsId = `project-details-${project.number}`;
 
   return (
-    <article className={`folder-card ${open ? "is-open" : ""}`}>
+    <article className={`folder-card ${open ? "is-open" : ""}`} id={`project-${project.number}`}>
       <button className="folder-visual" type="button" onClick={onToggle} aria-expanded={open} aria-controls={detailsId} aria-label={`${open ? "Cerrar" : "Abrir"} ${project.name}`}>
         <span className="folder-tab" />
         <span className="folder-back">
