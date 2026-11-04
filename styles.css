@@ -16,6 +16,8 @@
 @media (hover:hover) and (pointer:fine){.showcase-project,.button,.explore-link{transition:transform .35s ease}.showcase-project:hover{transform:translateY(-3px)}}
 @media (prefers-reduced-motion:reduce){.showcase-project,.button,.explore-link{transition:none!important}.image-frame img{will-change:auto}}
 
+section.project-details,section.contact,footer{content-visibility:auto;contain-intrinsic-size:800px}
+
 /* Scroll-led focus states for the project showcase. */
 .showcase-project{transition:background .35s,border-color .5s;will-change:transform}
 .showcase-project:hover,.showcase-project.is-active{background:rgba(255,255,255,.012);border-bottom-color:rgba(78,222,163,.45)}

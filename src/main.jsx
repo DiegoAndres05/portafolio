@@ -11,7 +11,7 @@ function FolderCard({ project, open, onToggle }) {
       <button className="folder-visual" type="button" onClick={onToggle} aria-expanded={open} aria-controls={detailsId} aria-label={`${open ? "Cerrar" : "Abrir"} ${project.name}`}>
         <span className="folder-tab" />
         <span className="folder-back">
-          <img src={project.image} alt="" loading="lazy" decoding="async" />
+          <span className="folder-back-glow" />
         </span>
         <span className="folder-files" aria-hidden="true">
           <span />

@@ -1,4 +1,4 @@
-import masajistaImage from "../assets/masajista-colombiana-showcase.png";
+import masajistaImage from "../assets/masajista-colombiana-showcase.jpg";
 
 export const selectedProjects = [
   {

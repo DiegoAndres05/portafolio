@@ -51,17 +51,14 @@ function initMotion() {
     const hero = document.querySelector(".hero");
     if (hero && window.matchMedia("(pointer: fine)").matches) {
       const moveAside = gsap.quickTo(".hero-aside", "x", { duration: 0.65, ease: "power2.out" });
-      const moveAsideY = gsap.quickTo(".hero-aside", "y", { duration: 0.65, ease: "power2.out" });
       const moveTitle = gsap.quickTo(".hero h1", "x", { duration: 0.65, ease: "power2.out" });
-      const moveTitleY = gsap.quickTo(".hero h1", "y", { duration: 0.65, ease: "power2.out" });
+      let bounds = hero.getBoundingClientRect();
       hero.addEventListener("mousemove", (event) => {
-        const bounds = hero.getBoundingClientRect();
         moveAside(((event.clientX - bounds.left) / bounds.width - 0.5) * 8);
-        moveAsideY(((event.clientY - bounds.top) / bounds.height - 0.5) * 5);
         moveTitle(((event.clientX - bounds.left) / bounds.width - 0.5) * 3);
-        moveTitleY(((event.clientY - bounds.top) / bounds.height - 0.5) * 2);
       });
-      hero.addEventListener("mouseleave", () => gsap.to(".hero-aside, .hero h1", { x: 0, y: 0, duration: 0.7, ease: "power3.out" }));
+      window.addEventListener("resize", () => { bounds = hero.getBoundingClientRect(); }, { passive: true });
+      hero.addEventListener("mouseleave", () => gsap.to(".hero-aside, .hero h1", { x: 0, duration: 0.7, ease: "power3.out" }));
     }
 
     ScrollTrigger.create({
